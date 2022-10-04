@@ -39,9 +39,7 @@ body {
 
 .btn {
   font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   min-width: 100px;
   background-color: transparent;
   padding: 20px 40px;
@@ -92,6 +90,30 @@ body {
   margin-left: auto;
   display: flex;
   align-items: center;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  margin-top: 65px;
+}
+.banner-content {
+  width: 40%;
+  margin-right: 20px;
+}
+.banner-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 50px;
+}
+.banner-desc {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 50px;
+}
+.banner-button + a {
+  margin-right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
