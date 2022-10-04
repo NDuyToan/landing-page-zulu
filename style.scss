@@ -1,3 +1,7 @@
+//variables
+$gray-dark: #262e36;
+$primary-color: #579aff;
+
 * {
   margin: 0;
   padding: 0;
@@ -37,12 +41,44 @@ body {
   margin: 0 auto;
 }
 
+//button
+.btn {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  background-color: transparent;
+  padding:  20px 40px;
+  border-radius: 15px;
+  color: $gray-dark;
+  border: 1px solid currentColor;
+  outline: none;
+  cursor: pointer;
+  line-height: normal;
+
+  &--primary {
+    color: #fff;
+    background-color: $primary-color;
+  }
+
+  &--link {
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
 .header {
   padding-top: 43px;
   display: flex;
+  align-items: center;
 
   &-logo {
     padding-right: 125px;
+    display: block;
   }
 
   &-menu {
@@ -50,12 +86,16 @@ body {
     list-style: none;
     align-items: center;
 
-    &-item {
+    &-item:not(:last-child) {
       margin-right: 75px;
     }
 
     &-link {
-      color: #262e36;
+      color: $gray-dark;
+      transition: all 0.3s ease;
+      &:hover{
+        color: $primary-color;
+      }
     }
   }
 
@@ -63,16 +103,5 @@ body {
     margin-left: auto;
     display: flex;
     align-items: center;
-  }
-
-  &-login,
-  &-signup {
-    padding: 25px 40px;
-    border-radius: 20px;
-  }
-
-  &-signup {
-    background-color: #579aff;
-    color: white;
   }
 }

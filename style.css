@@ -37,36 +37,61 @@ body {
   margin: 0 auto;
 }
 
+.btn {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  background-color: transparent;
+  padding: 20px 40px;
+  border-radius: 15px;
+  color: #262e36;
+  border: 1px solid currentColor;
+  outline: none;
+  cursor: pointer;
+  line-height: normal;
+}
+.btn--primary {
+  color: #fff;
+  background-color: #579aff;
+}
+.btn--link {
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+}
+.btn--link:hover {
+  color: #579aff;
+}
+
 .header {
   padding-top: 43px;
   display: flex;
+  align-items: center;
 }
 .header-logo {
   padding-right: 125px;
+  display: block;
 }
 .header-menu {
   display: flex;
   list-style: none;
   align-items: center;
 }
-.header-menu-item {
+.header-menu-item:not(:last-child) {
   margin-right: 75px;
 }
 .header-menu-link {
   color: #262e36;
+  transition: all 0.3s ease;
+}
+.header-menu-link:hover {
+  color: #579aff;
 }
 .header-auth {
   margin-left: auto;
   display: flex;
   align-items: center;
-}
-.header-login, .header-signup {
-  padding: 25px 40px;
-  border-radius: 20px;
-}
-.header-signup {
-  background-color: #579aff;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
