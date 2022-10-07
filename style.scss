@@ -1,6 +1,8 @@
 //variables
 $gray-dark: #262e36;
+$gray-light: #6e757c;
 $primary-color: #579aff;
+$gray-lightest: #f3f3f3;
 
 * {
   margin: 0;
@@ -21,13 +23,17 @@ a {
   text-decoration: none;
   color: #262e36;
 }
+ul {
+  list-style: none;
+}
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: #262e36;
+  color: $gray-light;
   line-height: 1;
   background-color: white;
+  padding-bottom: 30px;
 }
 
 .wrapper {
@@ -52,7 +58,7 @@ body {
   background-color: transparent;
   padding: 20px 40px;
   border-radius: 15px;
-  color: $gray-dark;
+  color: $gray-light;
   border: 1px solid currentColor;
   outline: none;
   cursor: pointer;
@@ -72,6 +78,67 @@ body {
   }
 }
 
+.section-title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: $gray-light;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #fff;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    border-bottom: 1px solid $primary-color;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  border: 1px solid $gray-lightest;
+  // box-shadow: 5px 5px #ddd ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  &-title {
+    margin-bottom: 30px;
+    line-height: normal;
+    font-size: 20px;
+  }
+
+  &-desc {
+    color: $gray-light;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: normal;
+  }
+}
+
+hr { 
+  background-color: #f3f3fe; 
+  height: 1px; 
+  border: 0; 
+}
+// ==========HEADER==========
 .header {
   padding-top: 43px;
   display: flex;
@@ -106,7 +173,7 @@ body {
     align-items: center;
   }
 }
-
+// ==========BANNER==========
 .banner {
   display: flex;
   align-items: center;
@@ -122,6 +189,7 @@ body {
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 50px;
+    color: $gray-dark;
   }
 
   &-desc {
@@ -132,5 +200,81 @@ body {
 
   &-button + a {
     margin-right: 30px;
+  }
+}
+// ==========WORK==========
+.work {
+  margin-top: 130px;
+  text-align: center;
+  
+  &-title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: normal;
+    color: $gray-dark;
+    max-width: 350px;
+    margin: 30px auto 0 auto;
+
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  &-item {
+    width: calc((100% - 140px) / 3);
+  }
+}
+
+// ==========PRICING==========
+.pricing {
+  margin-top: 130px;
+
+  // &-line {
+  //   background-color: $gray-light;
+  // }
+
+  &-title {
+    margin-top: 20px;
+    font-size: 60px;
+    max-width: 380px;
+    text-align: center;
+    margin: 20px auto;
+    line-height: normal;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    width: calc((100% - 80px) / 3);
+    border: 1px solid $gray-lightest;
+    border-radius: 20px;
+    padding: 60px 20px;
+    box-shadow: 1px 1px rgb(237, 233, 233);
+  }
+
+  &-plan {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &-price {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  &-desc {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: normal;
+  
   }
 }
